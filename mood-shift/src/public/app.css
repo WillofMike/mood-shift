@@ -1,0 +1,71 @@
+#title {
+font-family: 'Crimson Text', serif;
+font-size: 1.75em;
+padding-bottom: 5px;
+}
+#three-containers {
+
+  border-bottom: solid  black 2px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+#polya {
+
+  font-size: 1em;
+  padding-top: 15px;
+  border: solid black 1px;
+  padding: 15px;
+}
+#polya-div {
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
+label {
+  padding: 2px;
+}
+.right-border {
+  border-right: solid black 1px;
+}
+.align {
+  font-size: 1em;
+}
+.best-solution {
+  padding: 25px;
+}
+header {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+footer {
+  border-top: solid black 1px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.general-button {
+  padding: 4px;
+}
+#align-copy {
+  padding-right: 800px;
+}
+
+.spacing {
+  padding: 7px;
+}
+#sol-1 {
+  padding: 7px;
+}
+#sol-2 {
+  padding: 7px;
+}
+#sol-3 {
+  padding: 7px;
+}
+
+.labeler {
+  font-size: 1.25em;
+  padding-top: 15px;
+}

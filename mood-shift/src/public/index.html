@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HwH</title>
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" type="text/css" href="semantic.min.css">
+<script
+ src="https://code.jquery.com/jquery-3.1.1.min.js"
+ integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+ crossorigin="anonymous"></script>
+<script src="semantic.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+  </head>
+  <body>
+    <header class="ui item menu">
+      <h1><span id="title">Polya Problem Solver</span></h1>
+    </header>
+    <main class="ui centered grid">
+
+      <div class= "ui internally celled grid" id="three-containers">
+
+        <div class="three wide column">
+
+          <form class="form-class" id="form-id">
+            <div class="">
+              <h3><label for="search">Ask any question, even math!</label></h3>
+            </div>
+            <input type="text" name="submit" placeholder="Ex. What is.. or 2 + 2" id="search">
+            <div class="general-button">
+              <button type="submit" class="ui small primary basic button">Search</button>
+            </div>
+          </form>
+          <h3>Choose your strategies...</h3>
+
+          <table class="align">
+            <tr>
+              <td class="right-border">
+                <input type="checkbox" name="guess" id="guess">
+                <label for="guess">Guess and Check</label>
+              </td>
+              <td class="">
+                <input type="checkbox" name="orderly-list"  id="orderly-list">
+                <label for="orderly-list">Make Orderly List</label>
+              </td>
+
+            </tr>
+            <tr>
+              <td class="right-border">
+                <input type="checkbox" name= "direct-reason"  id="direct-reason">
+                <label for="direct-reason">Use Direct Reasoning</label>
+              </td>
+              <td class="">
+                <input type="checkbox" name="solve-equation"  id="solve-equation">
+                <label for="solve-equation">Solve a simpler problem</label>
+              </td>
+
+            </tr>
+            <tr>
+              <td class="right-border">
+                <input type="checkbox" name="easier-problem"  id="easier-problem">
+                <label for="easier-problem">Solve an easier problem</label>
+              </td>
+              <td class="">
+                <input type="checkbox" name="model"  id="model">
+                <label for="model">Use a model</label>
+              </td>
+
+            </tr>
+            <tr>
+
+              <td class="right-border">
+                <input type="checkbox" name="symmetry"  id="symmetry">
+                <label for="symmetry">Use Symmetry</label>
+              </td>
+              <td class="">
+                <input type="checkbox" name="draw" id="draw">
+                <label for="draw">Draw a picture</label>
+              </td>
+
+            </tr>
+            <tr>
+              <td class="right-border">
+                <input type="checkbox" name="formula" id="formula">
+                <label for="formula">Use a formula</label>
+              </td>
+              <td class="">
+                <input type="checkbox" name="backwards" id="backwards">
+                <label for="backwards">Work Backwards</label>
+              </td>
+
+            </tr>
+            <tr>
+              <td class="right-border">
+                <input type="checkbox" name="pattern"  id="pattern">
+                <label for="pattern">Look for a pattern</label>
+              </td>
+
+              <td class="">
+                <input type="checkbox" name="eliminate"  id="eliminate">
+                <label for="eliminate">Eliminate Possibilities</label>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="ten wide column">
+
+          <section class="results">
+            <!-- Append results here -->
+          </section>
+
+        </div>
+        <div class="three wide column">
+
+          <section class="polyaAppend">
+
+            <h2 id="appending">This site is designed to solve the toughest problems by using the Polya Technique. Fill out the form to start solving! </h2>
+            <h4 id="appending-sol"></h4>
+            <h4 id="appending-sol2"></h4>
+            <h4 id="appending-sol3"></h4>
+            <h4 id="appending3"></h4>
+            <h4 id="appending4"></h4>
+            <h4 id="appending5"></h4>
+            <h4 id="appending6"></h4>
+            <h4 id="appending7"></h4>
+            <h4 id="appending8"></h4>
+            <h4 id="appending9"></h4>
+            <!-- append inputs -->
+            <!-- append inputs -->
+
+          </section>
+
+        </div>
+
+      </div>
+
+        <div class="ui equal width form" id="polya-div">
+
+          <!-- polya section -->
+
+          <form id="polya">
+            <!-- Rephrase section -->
+            <label class="labeler" for="rephrase">Rephrase you problem</label>
+            <input type="text" name="rephrase" placeholder="Rephrase here" id="rephrase">
+            <button class="ui small primary basic button">Pin Me</button>
+
+            <div class="all-solutions">
+
+
+
+                <label class="labeler" for="all-solutions">List any solution that you think will work!</label>
+                <input type="text" name="solution" placeholder="Possible Solution Here" id="all-solutions">
+                <button id="sol-1" class="ui small primary basic button">Pin Me</button>
+
+                <input type="text" name="solutions" placeholder="Possible Solution Here">
+                <button id="sol-2" class="ui small primary basic button">Pin Me</button>
+
+                <input type="text" name="solutioning" placeholder="Possible Solution Here">
+                <button id="sol-3" class="ui small primary basic button">Pin Me</button>
+                <!-- <div class="checkbox-labels"> -->
+
+              <!-- All solutions section -->
+
+              <!-- Place radio solutions here -->
+              <!-- Which solution did they choose section -->
+              <div class="best-solution">
+                <label class="labeler">Which solution has the best Performance, Maintainability and Capability?</label>
+                <div class="">
+                  <label>Solution 1</label>
+                  <input type="radio" name="Solution 1">
+                  <label>Solution 2</label>
+                  <input type="radio" name="Solution 1">
+                  <label>Solution 3</label>
+                  <input type="radio" name="Solution 1">
+
+                </div>
+              </div>
+              <!-- Checkbox questions Section -->
+              <div class="spacing" id="unknown-input">
+
+                <label class="labeler" for="checkboxUnknown">Any Unknowns?</label>
+                <input type="text" name="unknowing" placeholder="What are your unknowns?" id="checkboxUnknown">
+                <button class="ui tiny primary basic button">Pin Me</button>
+
+              </div>
+
+              <div class="spacing" id="data-input">
+
+                <label class="labeler" for="checkboxData">Any Data?</label>
+                <input type="text" name="data" placeholder="What is your data?" id="checkboxData">
+                <button class="ui tiny primary basic button">Pin Me</button>
+
+              </div>
+
+              <div class="spacing" id="condition-input">
+
+                <label class="labeler" for="checkboxUnknowns">Any Conditions?</label>
+                <input type="text" name="condition" placeholder="What are your conditions?" id="checkboxUnknowns">
+                <button class="ui tiny primary basic button">Pin Me</button>
+              </div>
+
+              <div class="spacing" id="prior-input">
+
+                <label class="labeler" for="checkboxUnknowing">Have you solved a similar problem before?</label>
+                <input type="text" name="similar" placeholder="Tell me what you solved!" id="checkboxUnknowing">
+                <button class="ui tiny primary basic button">Pin Me</button>
+              </div>
+
+              <div class="spacing" id="related-input">
+
+                <label class="labeler" for="checkboxUn">Do you know an easier, related problem?</label>
+                <input type="text" name="related" placeholder="What's related?" id="checkboxUn">
+                <button class="ui tiny primary basic button">Pin Me</button>
+              </div>
+
+              <div class="spacing" id="related-solved-input">
+
+                <label class="labeler" for="checkbox">Do you know an easier, related problem that you've solved?</label>
+                <input type="text" name="solved" placeholder="What's related?" id="checkbox">
+                <button class="ui tiny primary basic button">Pin Me</button>
+              </div>
+
+              <div class="spacing" id="restate-input">
+
+                <label class="labeler" for="checkboxLast">Can you restate the problem again?</label>
+                <input type="text" name="restate" placeholder="Tell me your problem..." id="checkboxLast">
+                <button class="ui tiny primary basic button">Pin Me</button>
+              </div>
+
+            </div>
+
+          </form>
+
+        </div>
+
+
+
+        <!-- polya section -->
+
+    </main>
+    <footer class="ui item menu">
+      <div id="align-copy">
+        <h5>&copy; 2017 Polya Problem Solver</h5>
+      </div>
+      <p>This site is power by <a href="https://products.wolframalpha.com/api/">Wolfram Alpha API</a></p>
+    </footer>
+    <script src="app.js"></script>
+    <script src="polya.js"></script>
+  </body>
+</html>
