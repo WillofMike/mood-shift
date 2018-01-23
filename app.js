@@ -12,7 +12,8 @@ const AuthController = require('./controllers/auth.js');
 const routes = require("./routes")
 const port = process.env.PORT || 3000;
 
-mongoose.connect('mongodb://localhost/mood_app')
+if (process.env.MONGODB_URI) mongoose.connect(process.env.MONGODB_URI)
+else mongoose.connect('mongodb://localhost/mood_app')
 
 const app = express()
 
