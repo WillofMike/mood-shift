@@ -32,7 +32,12 @@ const authController = {
         //
         // authFunction(req, res, next);
         return User.findOne({ email: req.body.email, password: req.body.password })
-          .then(user => res.json(user))
+          .then(user => {
+            return Promise.all([ user, Token.create({ userId: user._id }) ])
+          })
+          .then(([user, token]) => {
+            res.json({ user, token })
+          })
           .catch(err => res.json({ error: 'Email or password is incorrect' }));
 	  },
     processSignup: (req, res, next) => {
