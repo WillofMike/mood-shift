@@ -25,10 +25,10 @@ app.use(bodyParser.urlencoded({ extended: false}))
 app.use(passport.initialize());
 app.use('/', express.static('public'));
 
-app.use((req, res, next) => {
-  console.log('the req', req);
-  next();
-})
+// app.use((req, res, next) => {
+//   console.log('the req', req);
+//   next();
+// })
 
 // Authentication
 app.post('/auth/login', AuthController.processLogin);

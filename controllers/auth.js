@@ -18,19 +18,23 @@ const authController = {
 	  },
     processLogin: (req, res, next) => {
         // This is the post handler for login attempts
-        var authFunction = passport.authenticate('local', (err, user, info) => {
-          if (err) return next(err);
-
-          if (!user) {
-            console.log('Error logging in!', err);
-            return res.json({ redirectTo: '/whoops' });
-          }
-
-          performLogin(req, res, next, user);
-        });
-
-        authFunction(req, res, next);
-	},
+        // var authFunction = passport.authenticate('local', (err, user, info) => {
+        //   console.log('process login', err, user, info)
+        //   if (err) return next(err);
+        //
+        //   if (!user) {
+        //     console.log('Error logging in!', err);
+        //     return res.json({ redirectTo: '/whoops' });
+        //   }
+        //
+        //   performLogin(req, res, next, user);
+        // });
+        //
+        // authFunction(req, res, next);
+        return User.findOne({ email: req.body.email, password: req.body.password })
+          .then(user => res.json(user))
+          .catch(err => res.json({ error: 'Email or password is incorrect' }));
+	  },
     processSignup: (req, res, next) => {
         // This is the post handler for signups
         let user = new User({

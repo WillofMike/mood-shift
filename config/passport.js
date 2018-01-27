@@ -16,7 +16,6 @@ var localStrategy = new LocalStrategy((username, password, done) => {
   // Given a username and password, let's try to authenticate this user.
   User.findOne({email: username}, (err, user) => {
     if (err) return done(err);
-
     if (!user) return done(null, false);
 
     user.comparePassword(password, (err, isMatch) => {
