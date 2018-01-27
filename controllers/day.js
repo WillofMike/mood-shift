@@ -8,7 +8,7 @@ module.exports = {
   },
   read: (req,res) => {
     const query = req.params.id ? {_id: req.params.id} : {}
-    return day.find(query)
+    return day.find(query).sort({ date: -1 })
       .then(doc => res.status(200).json(doc))
       .catch(err => res.status(500).json(err))
   },
@@ -19,7 +19,12 @@ module.exports = {
   },
   delete: (req,res) => {
     return day.findByIdandupdate(req.params.id, {isDeleted: true})
-    .then(doc => res.status(200))
-    .catch(err => res.status(500).json(err))
+      .then(doc => res.status(200))
+      .catch(err => res.status(500).json(err))
+  },
+  readDaysForUser: (req, res) => {
+    return day.find({ userId: req.params.userId }).sort({ date: -1 })
+      .then(doc => res.status(200).json(doc))
+      .catch(err => res.status(500).json(err))
   },
 };

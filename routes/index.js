@@ -2,6 +2,7 @@ const DayController = require('../controllers/day')
 const UserController = require('../controllers/user')
 module.exports = (app) => {
   app.get('/day', DayController.read)
+  app.get('/day/user/:userId', DayController.readDaysForUser)
   app.get('/day/:id', DayController.read)
   app.post('/day', DayController.create)
   app.put('/day/:id', DayController.update)
